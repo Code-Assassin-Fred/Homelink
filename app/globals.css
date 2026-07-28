@@ -10,10 +10,16 @@
   --color-lime-hover: #c8e600;
   --color-forest: #1B2F2F;
   --color-forest-light: #243c3c;
-  --color-tangerine: #FF932B;
-  --color-tangerine-hover: #e07d1a;
+  --color-tangerine: #ff9635;
+  --color-tangerine-hover: #e8852a;
   --color-jade: #02AD7E;
   --color-jade-hover: #029a6f;
+  --color-hero-green: #00b87c;
+  --color-hero-green-dark: #009e6d;
+  --color-hero-green-darker: #008a5e;
+  --color-hero-green-light: #12b36e;
+  --color-hero-green-lighter: #1ec98a;
+  --color-hero-highlight: #f7ff00;
   --color-navy: #002E67;
   --color-offwhite: #F7F8F6;
   --color-charcoal: #2A2A2A;

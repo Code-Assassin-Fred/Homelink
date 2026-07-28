@@ -4,7 +4,7 @@ const companyLinks = [
   { name: "About Us", href: "/about" },
   { name: "How It Works", href: "/how-it-works" },
   { name: "Why Choose Us", href: "/why-choose-us" },
-  { name: "Resources", href: "/resources" },
+  { name: "FAQs", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -20,7 +20,6 @@ const legalLinks = [
   { name: "Privacy Policy", href: "/privacy-policy" },
   { name: "Terms & Conditions", href: "/terms-conditions" },
   { name: "Disclaimer", href: "/disclaimer" },
-  { name: "FAQs", href: "/faq" },
 ];
 
 export default function Footer() {
