@@ -34,6 +34,7 @@
   --animate-slide-up: slide-up 0.6s ease-out forwards;
   --animate-scale-in: scale-in 0.5s ease-out forwards;
   --animate-slide-right: slide-right 0.6s ease-out forwards;
+  --animate-spin-sphere: spin-sphere-y 14s linear infinite;
 }
 
 /* ========================================
@@ -99,6 +100,15 @@ h1, h2, h3, h4, h5, h6 {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes spin-sphere-y {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
   }
 }
 

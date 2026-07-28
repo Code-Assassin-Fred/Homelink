@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CTAButton from "@/components/cta-button/CTAButton";
 
 export default function Hero() {
@@ -71,17 +72,18 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — Hero image area */}
-          <div className="hidden lg:flex justify-center items-end">
-            <div className="relative w-full max-w-md aspect-[4/5]">
-              <div className="absolute inset-0 rounded-3xl bg-hero-green-light/30 backdrop-blur-sm border border-white/10 flex flex-col items-center justify-center text-white p-8">
-                <svg className="w-20 h-20 mb-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 22V12h6v10" />
-                </svg>
-                <p className="text-sm font-medium text-center text-white/80">
-                  Hero Image Placeholder
-                </p>
+          {/* Right — Spinning sphere */}
+          <div className="hidden lg:flex justify-center items-center">
+            <div className="relative w-full max-w-md aspect-square [perspective:900px]">
+              <div className="animate-spin-sphere [transform-style:preserve-3d] will-change-transform">
+                <Image
+                  src="/sphere.png"
+                  alt=""
+                  width={480}
+                  height={480}
+                  priority
+                  className="w-full h-auto drop-shadow-2xl"
+                />
               </div>
 
               {/* Floating stat badge */}
