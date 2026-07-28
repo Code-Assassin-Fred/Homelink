@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-6rem)] bg-hero-green overflow-hidden flex items-center"
+      className="relative min-h-[calc(100vh-6rem)] bg-hero-green overflow-hidden flex items-start"
     >
       {/* Diagonal shard / fold pattern — CLOOPEN-style geometric depth */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -34,11 +34,12 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-6 pb-12 lg:pt-8 lg:pb-16">
           {/* Left Content */}
           <div className="animate-slide-up">
             <h1 className="font-heading font-extrabold text-xl sm:text-2xl lg:text-3xl xl:text-[2.25rem] text-white leading-[1.15] mb-6 uppercase tracking-tight">
-              Your Trusted Representative in{" "}
+              Your Trusted{" "}
+              <span className="text-hero-highlight">Representative</span> in{" "}
               <span className="text-hero-highlight">Kenya</span> While You Live
               Abroad.
             </h1>

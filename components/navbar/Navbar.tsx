@@ -56,15 +56,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0">
-              <span
-                className={`font-heading text-2xl font-bold tracking-tight ${
-                  isHome ? "text-hero-highlight" : "text-lime"
-                }`}
-              >
+            <Link href="/" className="shrink-0">
+              <span className="font-logo text-white text-2xl font-extrabold tracking-wide leading-tight block">
                 HOME LINK
-              </span>
-              <span className="text-white font-heading text-2xl font-bold tracking-tight">
+                <br />
                 AFRICA
               </span>
             </Link>
@@ -125,13 +120,12 @@ export default function Navbar() {
 
               <button
                 onClick={() => setSideMenuOpen(true)}
-                className="ml-2 inline-flex items-center gap-2 text-white font-body text-sm font-semibold uppercase tracking-wide px-3 py-2 hover:text-hero-highlight transition-colors duration-200"
+                className="ml-2 inline-flex items-center text-white p-2 hover:text-hero-highlight transition-colors duration-200"
                 aria-label="Open menu"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                Menu
               </button>
             </div>
 
@@ -153,12 +147,9 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 ) : (
-                  <>
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <span className="text-sm font-semibold uppercase tracking-wide">Menu</span>
-                  </>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
                 )}
               </button>
             </div>
