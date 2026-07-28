@@ -1,5 +1,5 @@
-import Image from "next/image";
 import CTAButton from "@/components/cta-button/CTAButton";
+import SpinningGlobe from "./SpinningGlobe";
 
 export default function Hero() {
   return (
@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-6 pb-12 lg:pt-8 lg:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-16 pb-12 lg:pt-24 lg:pb-16">
           {/* Left Content */}
           <div className="animate-slide-up">
             <h1 className="font-heading font-extrabold text-xl sm:text-2xl lg:text-3xl xl:text-[2.25rem] text-white leading-[1.15] mb-6 uppercase tracking-tight">
@@ -74,17 +74,8 @@ export default function Hero() {
 
           {/* Right — Spinning sphere */}
           <div className="hidden lg:flex justify-center items-center">
-            <div className="relative w-full max-w-md aspect-square [perspective:900px]">
-              <div className="animate-spin-sphere [transform-style:preserve-3d] will-change-transform">
-                <Image
-                  src="/sphere.png"
-                  alt=""
-                  width={480}
-                  height={480}
-                  priority
-                  className="w-full h-auto drop-shadow-2xl"
-                />
-              </div>
+            <div className="relative w-full max-w-md aspect-square">
+              <SpinningGlobe />
 
               {/* Floating stat badge */}
               <div className="absolute bottom-6 right-6 bg-white px-5 py-3 rounded-2xl shadow-lg">
