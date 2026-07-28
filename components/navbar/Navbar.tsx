@@ -57,10 +57,8 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <Link href="/" className="shrink-0">
-              <span className="font-logo text-white text-2xl font-extrabold tracking-wide leading-tight block">
-                HOME LINK
-                <br />
-                AFRICA
+              <span className="font-logo text-white text-lg sm:text-xl lg:text-2xl font-bold tracking-wider whitespace-nowrap">
+                HOME LINK AFRICA
               </span>
             </Link>
 

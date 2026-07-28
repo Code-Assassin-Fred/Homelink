@@ -27,7 +27,7 @@
   /* Typography */
   --font-heading: var(--font-outfit);
   --font-body: var(--font-inter);
-  --font-logo: var(--font-syne);
+  --font-logo: var(--font-orbitron);
 
   /* Animation Durations */
   --animate-fade-in: fade-in 0.6s ease-out forwards;
