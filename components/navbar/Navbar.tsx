@@ -237,11 +237,8 @@ export default function Navbar() {
             onClick={closeSideMenu}
             aria-label="Close menu overlay"
           />
-          <aside className="absolute top-0 right-0 h-full w-full max-w-sm bg-forest shadow-2xl flex flex-col">
-            <div className="flex items-center justify-between px-6 h-24 border-b border-forest-light">
-              <span className="text-lime font-heading font-bold text-lg uppercase tracking-wide">
-                Menu
-              </span>
+          <aside className="absolute top-12 right-0 w-full max-w-sm max-h-[calc(100vh-5rem)] bg-forest shadow-2xl flex flex-col rounded-l-3xl overflow-hidden">
+            <div className="flex items-center justify-end px-6 h-16 border-b border-forest-light">
               <button
                 onClick={closeSideMenu}
                 className="text-white p-2 hover:text-lime transition-colors duration-200"
@@ -253,13 +250,13 @@ export default function Navbar() {
               </button>
             </div>
 
-            <nav className="flex-1 px-6 py-8 space-y-1">
+            <nav className="flex-1 px-6 py-6 space-y-1 overflow-y-auto">
               {sideMenuLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={closeSideMenu}
-                  className="block text-white font-heading font-bold text-xl uppercase tracking-wide py-4 border-b border-forest-light hover:text-lime transition-colors duration-200"
+                  className="block text-white font-heading font-bold text-base uppercase tracking-wide py-3 border-b border-forest-light hover:text-lime transition-colors duration-200"
                 >
                   {link.name}
                 </Link>
