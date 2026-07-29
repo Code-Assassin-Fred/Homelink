@@ -42,7 +42,7 @@ export default function ServiceCard({
   index,
 }: ServiceCardProps) {
   return (
-    <article className={styles.card}>
+    <article className={styles.card} id={slug}>
       {/* Left — Gradient Panel with Icon & Title */}
       <div className={styles.imagePanel} style={{ background: gradient }}>
         <div className={styles.imagePanelIcon}>{icon}</div>
@@ -73,11 +73,11 @@ export default function ServiceCard({
 
         <div className={styles.ctaRow}>
           <Link
-            href={`/services/${slug}`}
+            href="/book-consultation"
             className={styles.ctaPrimary}
-            id={`view-${slug}`}
+            id={`cta-${slug}`}
           >
-            View Service Details
+            {cta}
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
                 strokeLinecap="round"
@@ -86,13 +86,6 @@ export default function ServiceCard({
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </Link>
-          <Link
-            href="/book-consultation"
-            className={styles.ctaSecondary}
-            id={`cta-${slug}`}
-          >
-            {cta}
           </Link>
         </div>
       </div>

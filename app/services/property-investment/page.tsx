@@ -27,6 +27,7 @@ export default function PropertyInvestmentPage() {
       description="Investing remotely in land, agriculture, or building projects in Kenya can be highly stressful and filled with uncertainty. Home Link Africa acts as your local, independent project representative. We inspect projects, verify contractors' progress against milestones, and coordinate on-site work to ensure your resources are spent exactly as planned, preventing costly errors or fraud."
       items={items}
       ctaText="Request Property Support"
+      gradient="linear-gradient(135deg, #1B2F2F 0%, #243c3c 40%, #02AD7E 100%)"
       icon={
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />

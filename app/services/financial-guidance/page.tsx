@@ -27,6 +27,7 @@ export default function FinancialGuidancePage() {
       description="Managing finances and investments across borders can be confusing. Home Link Africa helps you understand the processes involved — from banking procedures to property financing to contractor payment structures. We organise your documentation, track expenses against milestones, and ensure you're asking the right questions. When specialist advice is needed, we connect you with appropriately licensed professionals."
       items={items}
       ctaText="Speak With Our Team"
+      gradient="linear-gradient(135deg, #243c3c 0%, #1B2F2F 40%, #ff9635 120%)"
       disclaimer="Home Link Africa does not provide regulated financial, legal, or investment advice. We help clients understand processes, stay organised, ask informed questions, and connect with licensed financial, legal, and tax professionals where specialised advice is required."
       icon={
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

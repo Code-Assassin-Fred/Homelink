@@ -5,16 +5,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const services = [
-  { name: "Property & Investment Management", href: "/services/property-investment" },
-  { name: "Diaspora Concierge Services", href: "/services/diaspora-concierge" },
-  { name: "Family Support & Welfare Checks", href: "/services/family-support" },
-  { name: "Financial & Investment Guidance", href: "/services/financial-guidance" },
-  { name: "Custom Services", href: "/services/custom-services" },
+  { name: "Property & Investment Management", href: "/#property-investment" },
+  { name: "Diaspora Concierge Services", href: "/#diaspora-concierge" },
+  { name: "Family Support & Welfare Checks", href: "/#family-support" },
+  { name: "Financial & Investment Guidance", href: "/#financial-guidance" },
+  { name: "Custom Services", href: "/#custom-services" },
 ];
 
 const primaryNavLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services", hasDropdown: true },
+  { name: "Services", href: "/#services", hasDropdown: true },
   { name: "About Us", href: "/about" },
 ];
 
@@ -185,7 +185,7 @@ export default function Navbar() {
                       {mobileServicesOpen && (
                         <div className="ml-4 mt-1 space-y-1">
                           <Link
-                            href="/services"
+                            href="/#services"
                             onClick={() => setMobileOpen(false)}
                             className="block px-4 py-2 text-lime text-sm font-medium hover:bg-forest-light rounded-lg transition-colors duration-200"
                           >
