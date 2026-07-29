@@ -68,7 +68,7 @@ export default function FAQPreview() {
                 </svg>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-5">
+                <div className="px-6 pt-4 pb-5">
                   <p className="text-charcoal text-sm leading-relaxed">
                     {faq.answer}
                   </p>
