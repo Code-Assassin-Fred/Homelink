@@ -237,8 +237,8 @@ export default function Navbar() {
             onClick={closeSideMenu}
             aria-label="Close menu overlay"
           />
-          <aside className="absolute top-12 right-0 w-full max-w-sm max-h-[calc(100vh-5rem)] bg-forest shadow-2xl flex flex-col rounded-l-3xl overflow-hidden">
-            <div className="flex items-center justify-end px-6 h-16 border-b border-forest-light">
+          <aside className="absolute top-12 right-0 w-full max-w-sm max-h-[calc(100vh-5rem)] bg-hero-green shadow-2xl flex flex-col rounded-l-lg overflow-hidden">
+            <div className="flex items-center justify-end px-6 h-16 border-b border-white/10">
               <button
                 onClick={closeSideMenu}
                 className="text-white p-2 hover:text-lime transition-colors duration-200"
@@ -267,7 +267,7 @@ export default function Navbar() {
               <Link
                 href="/book-consultation"
                 onClick={closeSideMenu}
-                className="flex items-center justify-center bg-tangerine text-white font-heading font-bold text-sm uppercase tracking-wide px-6 py-4 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200 w-full"
+                className="flex items-center justify-center bg-tangerine text-white font-heading font-bold text-sm uppercase tracking-wide px-5 py-3 rounded-sm hover:bg-tangerine-hover transition-colors duration-200 w-full"
               >
                 Book a Consultation
               </Link>
