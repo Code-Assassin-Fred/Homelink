@@ -14,8 +14,8 @@ const services = [
 
 const primaryNavLinks = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
   { name: "Services", href: "/services", hasDropdown: true },
+  { name: "About Us", href: "/about" },
 ];
 
 const sideMenuLinks = [
