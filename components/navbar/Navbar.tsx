@@ -19,7 +19,7 @@ const primaryNavLinks = [
 ];
 
 const sideMenuLinks = [
-  { name: "How It Works", href: "/how-it-works" },
+  { name: "How It Works", href: "/#how-it-works" },
   { name: "FAQs", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];

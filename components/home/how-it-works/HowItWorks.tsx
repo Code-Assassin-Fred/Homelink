@@ -1,5 +1,3 @@
-import SectionHeading from "@/components/section-heading/SectionHeading";
-
 const steps = [
   {
     number: "01",
@@ -35,37 +33,42 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-jade py-20 sm:py-28">
+    <section id="how-it-works" className="bg-jade py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="How It Works"
-          subtitle="A simple, transparent process from first contact to task completion."
-          light
-        />
+        <div className="mt-8 lg:mt-10">
+          <p className="mx-auto max-w-2xl text-center text-white text-lg sm:text-xl leading-relaxed">
+            A simple, transparent process from first contact to task completion.
+          </p>
+          <div className="mt-10 space-y-12">
+            {steps.map((step, index) => {
+              const isRight = index % 2 === 1;
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative">
-              {/* Connecting line (hidden on mobile, shown between cards on larger screens) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-full w-8 h-0.5 bg-white -translate-x-4 z-0" />
-              )}
-
-              <div className="relative bg-forest rounded-2xl p-8 h-full">
-                <div className="w-14 h-14 rounded-full bg-lime flex items-center justify-center mb-6">
-                  <span className="text-forest font-heading font-bold text-lg">
-                    {step.number}
-                  </span>
+              return (
+                <div
+                  key={step.number}
+                  className={`relative ${
+                    isRight ? "lg:flex lg:justify-end" : "lg:flex lg:justify-start"
+                  }`}
+                >
+                  <div className="w-full lg:w-[60%]">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="inline-flex items-center justify-center rounded-md bg-white text-forest font-heading font-bold text-sm tracking-wide px-4 py-3">
+                        Step {step.number}
+                      </div>
+                      <h3 className="font-heading font-bold text-2xl text-white">
+                        {step.title}
+                      </h3>
+                    </div>
+                    <div className="bg-forest/95 border border-white/10 rounded-md p-8 shadow-[0_32px_80px_rgba(0,0,0,0.15)]">
+                      <p className="text-white text-sm leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-heading font-bold text-white text-xl mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-white text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
