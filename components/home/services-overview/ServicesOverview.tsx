@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/section-heading/SectionHeading";
+import SectionHeading from "@/components/section-heading/SectionHeading";
 import ServiceCard from "@/components/services/ServiceCard";
 
 const services = [
@@ -7,6 +8,19 @@ const services = [
     slug: "property-investment",
     tagline: "Protect your investments with",
     taglineItalic: "eyes on the ground",
+    description:
+      "Designed for clients investing or managing projects remotely. Home Link Africa serves as your trusted representative throughout the project, verifying progress, coordinating contractors, and delivering timely updates.",
+    items: [
+      "Property verification",
+      "Land and property inspections",
+      "Construction monitoring",
+      "Contractor coordination",
+      "Site visits",
+      "Agricultural investment oversight",
+      "Project accountability",
+      "Progress reporting",
+      "Photo and video documentation",
+    ],
     stat: "100%",
     statLabel: "visual proof on every site visit",
     cta: "Request Property Support",
@@ -26,6 +40,19 @@ const services = [
     slug: "diaspora-concierge",
     tagline: "Your reliable local presence,",
     taglineItalic: "thousands of miles away",
+    description:
+      "Helping clients handle personal, administrative, and practical matters in Kenya when they cannot be physically present. Home Link Africa provides dependable local support for the tasks that matter most.",
+    items: [
+      "Government service assistance",
+      "Document collection and submission",
+      "School visits",
+      "Hospital visits",
+      "Home inspections",
+      "Event coordination",
+      "Personal errands",
+      "Administrative support",
+      "Appointment coordination",
+    ],
     stat: "Same-day",
     statLabel: "response on urgent requests",
     cta: "Request Concierge Support",
@@ -45,6 +72,18 @@ const services = [
     slug: "family-support",
     tagline: "Stay connected to the people",
     taglineItalic: "who matter most",
+    description:
+      "Focused on helping clients care for loved ones from abroad, Home Link Africa provides regular welfare visits and detailed reports so families stay informed and reassured.",
+    items: [
+      "Elderly welfare visits",
+      "Family check-ins",
+      "School follow-ups",
+      "Hospital visits",
+      "Care coordination",
+      "Communication support",
+      "Mediation assistance",
+      "Welfare reporting",
+    ],
     stat: "Detailed reports",
     statLabel: "with photos after every visit",
     cta: "Book a Welfare Check",
@@ -60,10 +99,21 @@ const services = [
     },
   },
   {
-    title: "Financial & Investment Guidance",
+    title: "Financial & Investment Guidance Support",
     slug: "financial-guidance",
     tagline: "Navigate Kenya's financial landscape",
     taglineItalic: "with confidence",
+    description:
+      "Designed to help clients understand financial processes and remain organised, with guidance, document tracking, and referrals to licensed experts when specialised advice is required.",
+    items: [
+      "Explaining banking processes",
+      "Property financing guidance",
+      "Documentation coordination",
+      "Budget tracking",
+      "Monitoring contractor payments",
+      "Organising investment documentation",
+      "Referrals to licensed professionals",
+    ],
     stat: "Licensed experts",
     statLabel: "in our referral network",
     cta: "Speak With Our Team",
@@ -83,6 +133,21 @@ const services = [
     slug: "custom-services",
     tagline: "No request is too unique,",
     taglineItalic: "we'll find a way",
+    description:
+      "One of the business's strongest differentiators. Every request is assessed individually and handled professionally where feasible.",
+    items: [
+      "Representing clients at meetings",
+      "Property or business inspections",
+      "Coordinating deliveries",
+      "Following up on documentation",
+      "Supervising one-off projects",
+      "Collecting or delivering important documents",
+      "Attending family meetings",
+      "Coordinating emergency support",
+      "School or institution visits",
+      "Farm or business oversight",
+      "Any agreed representation or support",
+    ],
     stat: "Fully flexible",
     statLabel: "scope tailored to your needs",
     cta: "Request a Custom Service",
@@ -115,9 +180,12 @@ export default function ServicesOverview() {
               slug={service.slug}
               tagline={service.tagline}
               taglineItalic={service.taglineItalic}
+              description={service.description}
+              items={service.items}
               stat={service.stat}
               statLabel={service.statLabel}
               cta={service.cta}
+              detailLink={`/services/${service.slug}`}
               gradient={service.gradient}
               subBrand={service.subBrand}
               themeColor={service.themeColor}

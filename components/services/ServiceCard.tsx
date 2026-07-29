@@ -12,9 +12,12 @@ interface ServiceCardProps {
   slug: string;
   tagline: string;
   taglineItalic?: string;
+  description: string;
+  items: string[];
   stat: string;
   statLabel: string;
   cta: string;
+  detailLink: string;
   gradient: string;
   subBrand: string;
   themeColor: string;
@@ -26,9 +29,12 @@ export default function ServiceCard({
   slug,
   tagline,
   taglineItalic,
+  description,
+  items,
   stat,
   statLabel,
   cta,
+  detailLink,
   gradient,
   subBrand,
   themeColor,
@@ -54,6 +60,17 @@ export default function ServiceCard({
           )}
         </h3>
 
+        <p className={styles.overviewDescription}>{description}</p>
+
+        <ul className={styles.overviewFeatureList}>
+          {items.map((item) => (
+            <li key={item} className={styles.overviewFeatureItem}>
+              <span className={styles.overviewFeatureBullet} />
+              {item}
+            </li>
+          ))}
+        </ul>
+
         <div className={styles.overviewBottomRow}>
           {/* Stat Box */}
           <div className={styles.overviewStat}>
@@ -63,7 +80,7 @@ export default function ServiceCard({
 
           {/* Capsule Button */}
           <Link
-            href="/book-consultation"
+            href={detailLink}
             className={styles.overviewCta}
             id={`cta-${slug}`}
             style={{
