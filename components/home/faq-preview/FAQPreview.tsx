@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import SectionHeading from "@/components/section-heading/SectionHeading";
 
 const faqs = [
   {
@@ -38,11 +36,9 @@ export default function FAQPreview() {
   return (
     <section id="faqs" className="bg-white py-20 sm:py-28 scroll-mt-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Frequently Asked Questions"
-          subtitle="Quick answers to the most common questions from our diaspora clients."
-        />
-
+        <p className="max-w-2xl mx-auto text-center text-base text-charcoal/80 mb-8">
+          Quick answers to the most common questions from our diaspora clients.
+        </p>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
@@ -51,7 +47,7 @@ export default function FAQPreview() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-forest hover:text-white group transition-colors duration-200"
+                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-forest hover:text-white group transition-colors duration-200"
               >
                 <span className="font-heading font-semibold text-base pr-4 text-forest group-hover:text-white transition-colors duration-200">
                   {faq.question}
@@ -76,18 +72,6 @@ export default function FAQPreview() {
               )}
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-10">
-          <Link
-            href="/#faqs"
-            className="inline-flex items-center gap-2 text-jade font-heading font-bold text-base hover:text-forest transition-colors duration-200"
-          >
-            View All FAQs
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>
