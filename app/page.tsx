@@ -16,8 +16,8 @@ export default function Home() {
       <HowItWorks />
       <WhyChooseUs />
       <FAQPreview />
-      <ContactSection />
       <FinalCTA />
+      <ContactSection />
     </>
   );
 }
