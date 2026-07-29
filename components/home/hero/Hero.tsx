@@ -53,7 +53,7 @@ export default function Hero() {
               <CTAButton href="/book-consultation" variant="tangerine">
                 Book a Consultation
               </CTAButton>
-              <CTAButton href="/services" variant="tangerine">
+              <CTAButton href="/#services" variant="tangerine">
                 Explore Our Services
               </CTAButton>
             </div>

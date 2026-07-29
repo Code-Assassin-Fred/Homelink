@@ -12,12 +12,6 @@ const services = [
   { name: "Custom Services", href: "/services/custom-services" },
 ];
 
-const primaryNavLinks = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services", hasDropdown: true },
-  { name: "About Us", href: "/about" },
-];
-
 const sideMenuLinks = [
   { name: "How It Works", href: "/#how-it-works" },
   { name: "FAQs", href: "/faq" },
@@ -27,6 +21,16 @@ const sideMenuLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const primaryNavLinks = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: isHome ? "#services" : "/#services", hasDropdown: true },
+    { name: "About Us", href: "/about" },
+  ];
+  const sideMenuLinks = [
+    { name: "How It Works", href: isHome ? "#how-it-works" : "/#how-it-works" },
+    { name: "FAQs", href: isHome ? "#faqs" : "/#faqs" },
+    { name: "Contact", href: "/contact" },
+  ];
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);

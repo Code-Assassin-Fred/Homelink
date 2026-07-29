@@ -80,7 +80,7 @@ export default function FAQPreview() {
 
         <div className="text-center mt-10">
           <Link
-            href="/faq"
+            href="/#faqs"
             className="inline-flex items-center gap-2 text-jade font-heading font-bold text-base hover:text-forest transition-colors duration-200"
           >
             View All FAQs
