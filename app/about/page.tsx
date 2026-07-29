@@ -3,7 +3,6 @@ import OurStory from "@/components/about/our-story/OurStory";
 import MissionVision from "@/components/about/mission-vision/MissionVision";
 import OurValues from "@/components/about/our-values/OurValues";
 import Experience from "@/components/about/experience/Experience";
-import OurCommitment from "@/components/home/our-commitment/OurCommitment";
 import FinalCTA from "@/components/home/final-cta/FinalCTA";
 
 export const metadata: Metadata = {
@@ -37,7 +36,6 @@ export default function AboutPage() {
       <MissionVision />
       <OurValues />
       <Experience />
-      <OurCommitment />
       <FinalCTA />
     </>
   );
