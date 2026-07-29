@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "Which areas of Kenya do you serve?",
     answer:
-      "We currently serve all major towns and counties across Kenya, with our strongest presence in Nairobi, Mombasa, Kisumu, Nakuru, and surrounding areas. For remote locations, we coordinate with trusted local contacts.",
+      "We serve clients across all counties in Kenya, with strong coverage in Nairobi, Mombasa, Kisumu, Nakuru, and other major towns.",
   },
   {
     question: "How do you provide updates?",
