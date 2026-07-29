@@ -37,7 +37,7 @@ export default function TrustBanner() {
   ];
 
   return (
-    <section className="bg-offwhite py-12 sm:py-16">
+    <section className="bg-gradient-to-b from-white to-[#f0f0f0] py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-charcoal font-heading font-semibold text-lg sm:text-xl mb-10">
           Trusted by Kenyans Living Abroad Across the Globe
