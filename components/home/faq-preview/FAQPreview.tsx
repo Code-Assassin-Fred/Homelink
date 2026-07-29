@@ -36,7 +36,7 @@ export default function FAQPreview() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faqs" className="bg-white py-20 sm:py-28">
+    <section id="faqs" className="bg-white py-20 sm:py-28 scroll-mt-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Frequently Asked Questions"

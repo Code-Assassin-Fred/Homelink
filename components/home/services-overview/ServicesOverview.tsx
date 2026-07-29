@@ -165,7 +165,7 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section id="services" className="bg-offwhite py-20 sm:py-28">
+    <section id="services" className="bg-offwhite py-20 sm:py-28 scroll-mt-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           subtitle="Comprehensive support tailored to the needs of Kenyans living abroad. From property management to family welfare — we've got you covered."

@@ -4,7 +4,7 @@ const companyLinks = [
   { name: "About Us", href: "/about" },
   { name: "How It Works", href: "/how-it-works" },
   { name: "Why Choose Us", href: "/why-choose-us" },
-  { name: "FAQs", href: "/faq" },
+  { name: "FAQs", href: "/#faqs" },
   { name: "Contact", href: "/contact" },
 ];
 

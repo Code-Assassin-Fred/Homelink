@@ -12,12 +12,6 @@ const services = [
   { name: "Custom Services", href: "/services/custom-services" },
 ];
 
-const sideMenuLinks = [
-  { name: "How It Works", href: "/#how-it-works" },
-  { name: "FAQs", href: "/faq" },
-  { name: "Contact", href: "/contact" },
-];
-
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";

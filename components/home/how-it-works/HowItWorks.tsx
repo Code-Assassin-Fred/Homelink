@@ -33,7 +33,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative overflow-hidden bg-jade py-12 sm:py-16">
+    <section id="how-it-works" className="relative overflow-hidden bg-jade py-12 sm:py-16 scroll-mt-24">
       {/* Decorative diagonal shard / subtle striations similar to hero */}
       <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
