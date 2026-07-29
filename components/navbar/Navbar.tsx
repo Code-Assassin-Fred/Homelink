@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+type NavLink = {
+  name: string;
+  href: string;
+  hasDropdown?: boolean;
+};
+
 const services = [
   { name: "Property & Investment Management", href: "/services/property-investment" },
   { name: "Diaspora Concierge Services", href: "/services/diaspora-concierge" },
@@ -15,15 +21,15 @@ const services = [
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const primaryNavLinks = [
+  const primaryNavLinks: NavLink[] = [
     { name: "Home", href: "/" },
     { name: "Services", href: isHome ? "#services" : "/#services", hasDropdown: true },
     { name: "About Us", href: "/about" },
   ];
-  const sideMenuLinks = [
+  const sideMenuLinks: NavLink[] = [
     { name: "How It Works", href: isHome ? "#how-it-works" : "/#how-it-works" },
     { name: "FAQs", href: isHome ? "#faqs" : "/#faqs" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: isHome ? "#contact" : "/#contact" },
   ];
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);

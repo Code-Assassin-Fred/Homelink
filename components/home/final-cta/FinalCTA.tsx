@@ -24,7 +24,7 @@ export default function FinalCTA() {
           <CTAButton href="/book-consultation" variant="lime" arrow>
             Book a Consultation
           </CTAButton>
-          <CTAButton href="/contact" variant="tangerine" arrow>
+          <CTAButton href="/#contact" variant="tangerine" arrow>
             Contact Us
           </CTAButton>
         </div>

@@ -5,7 +5,7 @@ const companyLinks = [
   { name: "How It Works", href: "/how-it-works" },
   { name: "Why Choose Us", href: "/why-choose-us" },
   { name: "FAQs", href: "/#faqs" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const serviceLinks = [
