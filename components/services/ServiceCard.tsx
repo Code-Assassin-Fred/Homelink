@@ -36,11 +36,7 @@ export default function ServiceCard({
   testimonial,
 }: ServiceCardProps) {
   return (
-    <article
-      className={styles.overviewCard}
-      id={slug}
-      style={{ borderTop: `6px solid ${themeColor}` }}
-    >
+    <article className={styles.overviewCard} id={slug}>
       {/* Left Column — Brand Banner */}
       <div className={styles.overviewImagePanel} style={{ background: gradient }}>
         <div className={styles.logoContainer}>

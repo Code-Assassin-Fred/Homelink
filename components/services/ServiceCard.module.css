@@ -394,7 +394,7 @@
   display: grid;
   grid-template-columns: 300px 1fr 280px;
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 14px;
   overflow: hidden;
   box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.04),
@@ -422,7 +422,7 @@
   align-items: flex-start;
   justify-content: center;
   padding: 40px 32px;
-  min-height: 380px;
+  min-height: 440px;
   overflow: hidden;
 }
 
@@ -471,7 +471,7 @@
   flex-direction: column;
   justify-content: space-between;
   background: #ffffff;
-  min-height: 380px;
+  min-height: 440px;
   box-sizing: border-box;
 }
 

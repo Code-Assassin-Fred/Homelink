@@ -1,4 +1,3 @@
-import SectionHeading from "@/components/section-heading/SectionHeading";
 import ServiceCard from "@/components/services/ServiceCard";
 
 const services = [
@@ -103,11 +102,6 @@ export default function ServicesOverview() {
   return (
     <section id="services" className="bg-offwhite py-20 sm:py-28">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Our Services"
-          subtitle="Comprehensive support tailored to the needs of Kenyans living abroad. From property management to family welfare — we've got you covered."
-        />
-
         <div className="space-y-12 mt-12">
           {services.map((service) => (
             <ServiceCard
