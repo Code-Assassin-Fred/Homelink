@@ -237,7 +237,7 @@ export default function Navbar() {
             onClick={closeSideMenu}
             aria-label="Close menu overlay"
           />
-          <aside className="absolute top-12 right-0 w-full max-w-sm max-h-[calc(100vh-5rem)] bg-hero-green shadow-2xl flex flex-col rounded-l-lg overflow-hidden">
+          <aside className="absolute top-12 right-0 w-full max-w-sm max-h-[calc(100vh-5rem)] bg-gradient-to-br from-hero-green via-forest/70 to-forest shadow-2xl flex flex-col rounded-l-lg overflow-hidden">
             <div className="flex items-center justify-end px-6 h-16 border-b border-white/10">
               <button
                 onClick={closeSideMenu}
