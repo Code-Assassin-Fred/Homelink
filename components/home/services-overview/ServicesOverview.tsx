@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/section-heading/SectionHeading";
-import SectionHeading from "@/components/section-heading/SectionHeading";
 import ServiceCard from "@/components/services/ServiceCard";
 
 const services = [
