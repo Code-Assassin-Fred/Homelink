@@ -37,21 +37,21 @@ export default function TrustBanner() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-[#f0f0f0] py-12 sm:py-16">
+    <section className="bg-gradient-to-b from-white to-[#f0f0f0] py-10 sm:py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-charcoal font-heading font-semibold text-lg sm:text-xl mb-10">
+        <p className="text-center text-charcoal font-heading font-semibold text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 lg:mb-10">
           Trusted by Kenyans Living Abroad Across the Globe
         </p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {trustItems.map((item) => (
             <div
               key={item.label}
-              className="flex flex-col items-center text-center gap-3"
+              className="flex flex-col items-center text-center gap-2 sm:gap-3"
             >
-              <div className="w-14 h-14 rounded-full bg-jade flex items-center justify-center text-white">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-jade flex items-center justify-center text-white">
                 {item.icon}
               </div>
-              <p className="text-forest font-heading font-semibold text-sm sm:text-base">
+              <p className="text-forest font-heading font-semibold text-xs sm:text-sm lg:text-base">
                 {item.label}
               </p>
             </div>

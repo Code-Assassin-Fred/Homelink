@@ -60,41 +60,41 @@ export default function ContactSection() {
         <path d="M0 340C210 300 450 420 690 400C930 380 1170 300 1440 320" stroke="var(--color-forest)" strokeWidth="1" opacity="0.22" />
         <path d="M0 160C230 110 470 210 710 190C950 170 1190 95 1440 130" stroke="var(--color-forest)" strokeWidth="1" opacity="0.18" />
       </svg>
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-        <div className="w-full text-center mb-12">
-          <p className="text-base text-charcoal">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="w-full text-center mb-8 sm:mb-12">
+          <p className="text-sm sm:text-base text-charcoal">
             Reliable Support in Kenya Starts With One Call
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+          <div className="space-y-4 sm:space-y-6">
             <div className="p-0 text-forest">
-              <h3 className="font-heading font-bold text-xl text-forest mb-6">
+              <h3 className="font-heading font-bold text-lg sm:text-xl text-forest mb-4 sm:mb-6">
                 Get in touch
               </h3>
-              <ul className="space-y-5">
+              <ul className="space-y-4 sm:space-y-5">
                 {contactDetails.map((item) => (
-                  <li key={item.title} className="flex items-start gap-4">
+                  <li key={item.title} className="flex items-start gap-3 sm:gap-4">
                     {item.href ? (
-                      <a href={item.href} className="w-10 h-10 rounded-full bg-jade flex items-center justify-center shrink-0 text-white">
+                      <a href={item.href} className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-jade flex items-center justify-center shrink-0 text-white">
                         {item.icon}
                       </a>
                     ) : (
-                      <div className="w-10 h-10 rounded-full bg-jade flex items-center justify-center shrink-0 text-white">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-jade flex items-center justify-center shrink-0 text-white">
                         {item.icon}
                       </div>
                     )}
                     <div>
-                      <p className="font-heading font-bold text-sm text-forest mb-1">
+                      <p className="font-heading font-bold text-xs sm:text-sm text-forest mb-1">
                         {item.title}
                       </p>
                       {item.href ? (
-                        <a href={item.href} className="text-forest text-sm hover:text-jade transition-colors duration-200">
+                        <a href={item.href} className="text-forest text-xs sm:text-sm hover:text-jade transition-colors duration-200">
                           {item.value}
                         </a>
                       ) : (
-                        <span className="text-forest text-sm">{item.value}</span>
+                        <span className="text-forest text-xs sm:text-sm">{item.value}</span>
                       )}
                     </div>
                   </li>
@@ -104,13 +104,13 @@ export default function ContactSection() {
           </div>
 
           <div className="p-0 lg:pl-8 xl:pl-10">
-            <h3 className="font-heading font-bold text-2xl text-forest mb-6">
+            <h3 className="font-heading font-bold text-xl sm:text-2xl text-forest mb-4 sm:mb-6">
               Send us a message
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label htmlFor="contact-name" className="block text-sm font-heading font-bold text-forest mb-2">
+                  <label htmlFor="contact-name" className="block text-xs sm:text-sm font-heading font-bold text-forest mb-2">
                     Full Name *
                   </label>
                   <input
@@ -120,12 +120,12 @@ export default function ContactSection() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-sm sm:text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="block text-sm font-heading font-bold text-forest mb-2">
+                  <label htmlFor="contact-email" className="block text-xs sm:text-sm font-heading font-bold text-forest mb-2">
                     Email Address *
                   </label>
                   <input
@@ -135,13 +135,13 @@ export default function ContactSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-sm sm:text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200"
                     placeholder="you@example.com"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="contact-phone" className="block text-sm font-heading font-bold text-forest mb-2">
+                <label htmlFor="contact-phone" className="block text-xs sm:text-sm font-heading font-bold text-forest mb-2">
                   Phone Number
                 </label>
                 <input
@@ -150,28 +150,28 @@ export default function ContactSection() {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-sm sm:text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200"
                   placeholder="+254 700 000 000"
                 />
               </div>
               <div>
-                <label htmlFor="contact-message" className="block text-sm font-heading font-bold text-forest mb-2">
+                <label htmlFor="contact-message" className="block text-xs sm:text-sm font-heading font-bold text-forest mb-2">
                   Message *
                 </label>
                 <textarea
                   id="contact-message"
                   name="message"
                   required
-                  rows={6}
+                  rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200 resize-none"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-forest/30 bg-offwhite text-charcoal font-body text-sm sm:text-base focus:outline-none focus:border-jade focus:ring-2 focus:ring-jade/20 transition-colors duration-200 resize-none"
                   placeholder="Tell us how we can help..."
                 />
               </div>
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 bg-lime text-forest font-heading font-bold text-base px-8 py-4 rounded-full hover:bg-lime-hover transition-colors duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-lime text-forest font-heading font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-lime-hover transition-colors duration-200 w-full sm:w-auto"
               >
                 Send Message
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -76,19 +76,19 @@ export default function OurCommitment() {
           subtitle="Promises we make — and keep — to every client."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {commitments.map((item) => (
             <div
               key={item.title}
-              className="bg-offwhite rounded-2xl p-7 border-l-4 border-lime hover:shadow-lg transition-shadow duration-300"
+              className="bg-offwhite rounded-2xl p-5 sm:p-6 lg:p-7 border-l-4 border-lime hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-forest flex items-center justify-center text-lime mb-5">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-forest flex items-center justify-center text-lime mb-4 sm:mb-5">
                 {item.icon}
               </div>
-              <h3 className="font-heading font-bold text-forest text-lg mb-2">
+              <h3 className="font-heading font-bold text-forest text-base sm:text-lg mb-2">
                 {item.title}
               </h3>
-              <p className="text-charcoal text-sm leading-relaxed">
+              <p className="text-charcoal text-xs sm:text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>

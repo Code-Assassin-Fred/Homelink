@@ -36,10 +36,10 @@ export default function FAQPreview() {
   return (
     <section id="faqs" className="bg-white py-20 sm:py-28 scroll-mt-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="max-w-2xl mx-auto text-center text-base text-charcoal/80 mb-8">
+        <p className="max-w-2xl mx-auto text-center text-sm sm:text-base text-charcoal/80 mb-6 sm:mb-8">
           Quick answers to the most common questions from our diaspora clients.
         </p>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -47,13 +47,13 @@ export default function FAQPreview() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-forest hover:text-white group transition-colors duration-200"
+                className="w-full flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 text-left hover:bg-forest hover:text-white group transition-colors duration-200"
               >
-                <span className="font-heading font-semibold text-base pr-4 text-forest group-hover:text-white transition-colors duration-200">
+                <span className="font-heading font-semibold text-sm sm:text-base pr-4 text-forest group-hover:text-white transition-colors duration-200">
                   {faq.question}
                 </span>
                 <svg
-                  className={`w-5 h-5 shrink-0 text-jade group-hover:text-lime transition-all duration-200 ${
+                  className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-jade group-hover:text-lime transition-all duration-200 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -64,7 +64,7 @@ export default function FAQPreview() {
                 </svg>
               </button>
               {openIndex === index && (
-                <div className="px-6 pt-4 pb-5">
+                <div className="px-4 sm:px-6 pt-3 sm:pt-4 pb-4 sm:pb-5">
                   <p className="text-charcoal text-sm leading-relaxed">
                     {faq.answer}
                   </p>

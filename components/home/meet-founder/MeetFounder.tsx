@@ -10,10 +10,10 @@ export default function MeetFounder() {
           light
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-5xl mx-auto">
           {/* Portrait */}
-          <div className="flex justify-center">
-            <div className="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="flex justify-center order-1 lg:order-none">
+            <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/founder.jpeg"
                 alt="Founder of Home Link Africa"
@@ -23,14 +23,14 @@ export default function MeetFounder() {
           </div>
 
           {/* Bio */}
-          <div className="text-white">
-            <h3 className="font-heading font-bold text-lime text-2xl sm:text-3xl mb-2">
+          <div className="text-white order-2 lg:order-none">
+            <h3 className="font-heading font-bold text-lime text-xl sm:text-2xl lg:text-3xl mb-2">
               Jane Doe
             </h3>
-            <p className="text-jade font-heading font-semibold text-base mb-6">
+            <p className="text-jade font-heading font-semibold text-sm sm:text-base mb-4 sm:mb-6">
               Founder &amp; Principal Consultant
             </p>
-            <div className="space-y-4 text-white text-base leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-white text-sm sm:text-base leading-relaxed">
               <p>
                 With over ten years of experience in the banking industry and a
                 background in counselling psychology, our founder combines

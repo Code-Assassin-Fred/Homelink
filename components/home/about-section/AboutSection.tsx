@@ -32,11 +32,11 @@ export default function Page() {
       </div>
 
       {/* ---------- About Hero ---------- */}
-      <section className="relative z-10 flex min-h-screen items-center px-8 md:px-16">
-        <div className="grid w-full items-center gap-20 lg:grid-cols-2">
+      <section className="relative z-10 flex min-h-screen items-center px-6 sm:px-8 md:px-12 lg:px-16">
+        <div className="grid w-full items-center gap-12 lg:gap-20 lg:grid-cols-2">
           {/* Left */}
           <div className="max-w-xl">
-            <h1 className="text-[42px] font-medium leading-[0.95] tracking-tight sm:text-[56px] md:text-[68px]">
+            <h1 className="text-[32px] font-medium leading-[0.95] tracking-tight sm:text-[42px] md:text-[56px] lg:text-[68px]">
               Your trusted
               <br />
               representative
@@ -44,7 +44,7 @@ export default function Page() {
               in Kenya
             </h1>
 
-            <p className="mt-8 text-lg leading-8 text-white/75">
+            <p className="mt-6 sm:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-white/75">
               Home Link Africa provides dependable on-the-ground support for
               Kenyans living abroad. Whether you're managing property,
               supporting loved ones, handling important documentation, or
@@ -55,20 +55,20 @@ export default function Page() {
 
           {/* Right */}
           <div className="max-w-md justify-self-end">
-            <p className="text-lg leading-8 text-white/75">
+            <p className="text-base sm:text-lg leading-7 sm:leading-8 text-white/75">
               We serve as your trusted eyes and ears on the ground, helping you
               stay connected to your investments, your family, and the matters
               that matter most—no matter where you are in the world.
             </p>
 
-            <div className="mt-10 space-y-4 text-lg text-white/85">
+            <div className="mt-8 sm:mt-10 space-y-3 sm:space-y-4 text-base sm:text-lg text-white/85">
               <div>• Property & investment oversight</div>
               <div>• Family welfare support</div>
               <div>• Concierge & administrative services</div>
               <div>• Transparent photo & video reporting</div>
             </div>
 
-            <CTAButton href="/book-consultation" variant="lime" arrow className="mt-10">
+            <CTAButton href="/book-consultation" variant="lime" arrow className="mt-8 sm:mt-10">
               Book Consultation
             </CTAButton>
           </div>

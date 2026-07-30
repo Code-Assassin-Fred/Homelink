@@ -691,15 +691,40 @@
   .overviewContent {
     padding: 28px 20px;
   }
-  
+
   .overviewHeadline {
     font-size: 1.5rem;
+  }
+
+  .overviewDescription {
+    font-size: 0.9rem;
+  }
+
+  .overviewFeatureList {
+    grid-template-columns: 1fr;
+    gap: 10px 14px;
+  }
+
+  .overviewFeatureItem {
+    font-size: 0.875rem;
   }
 
   .overviewBottomRow {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+  }
+
+  .overviewStat {
+    max-width: 100%;
+  }
+
+  .overviewStatNumber {
+    font-size: 1.75rem;
+  }
+
+  .overviewStatLabel {
+    font-size: 0.875rem;
   }
 
   .overviewCta {
@@ -709,6 +734,10 @@
 
   .overviewTestimonial {
     padding: 28px 20px;
+  }
+
+  .testimonialQuote {
+    font-size: 0.875rem;
   }
 }
 

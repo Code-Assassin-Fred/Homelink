@@ -85,11 +85,11 @@ export default function HowItWorks() {
       </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mt-8 lg:mt-10">
-          <p className="mx-auto max-w-2xl text-center text-white text-lg sm:text-xl leading-relaxed">
+          <p className="mx-auto max-w-2xl text-center text-white text-base sm:text-lg lg:text-xl leading-relaxed">
             A simple, transparent process from first contact to task completion.
           </p>
-          <div className="mt-10">
-            <div className="space-y-12">
+          <div className="mt-8 sm:mt-10">
+            <div className="space-y-8 sm:space-y-12">
               {steps.map((step, index) => {
                 const isRight = index % 2 === 1;
 
@@ -101,15 +101,15 @@ export default function HowItWorks() {
                       }`}
                     >
                       <div className="w-full lg:w-[60%]">
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="inline-flex items-center justify-center rounded-md bg-white text-forest font-heading font-bold text-sm tracking-wide px-4 py-3">
+                        <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                          <div className="inline-flex items-center justify-center rounded-md bg-white text-forest font-heading font-bold text-xs sm:text-sm tracking-wide px-3 sm:px-4 py-2.5 sm:py-3">
                             Step {step.number}
                           </div>
-                          <h3 className="font-heading font-bold text-2xl text-white">
+                          <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">
                             {step.title}
                           </h3>
                         </div>
-                        <div className="bg-forest/95 border border-white/10 rounded-md p-8 shadow-[0_32px_80px_rgba(0,0,0,0.15)]">
+                        <div className="bg-forest/95 border border-white/10 rounded-md p-5 sm:p-6 lg:p-8 shadow-[0_32px_80px_rgba(0,0,0,0.15)]">
                           <p className="text-white text-sm leading-relaxed">
                             {step.description}
                           </p>

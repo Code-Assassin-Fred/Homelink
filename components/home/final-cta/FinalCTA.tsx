@@ -12,10 +12,10 @@ export default function FinalCTA() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-6">
+        <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-white leading-tight mb-4 sm:mb-6">
           Ready to Get <span className="text-lime">Started?</span>
         </h2>
-        <p className="text-white text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+        <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8 lg:mb-10 max-w-2xl mx-auto">
           Take the first step towards reliable representation in Kenya. Book a
           consultation today and let us show you how Home Link Africa can support
           your needs with professionalism and care.

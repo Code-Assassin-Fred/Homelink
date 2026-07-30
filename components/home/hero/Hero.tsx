@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-32 pb-12 lg:pt-40 lg:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-24 pb-12 sm:pt-32 lg:pt-40 lg:pb-16">
           {/* Left Content */}
           <div className="animate-slide-up">
             <h1 className="font-heading font-extrabold text-xl sm:text-2xl lg:text-3xl xl:text-[2.25rem] text-white leading-[1.15] mb-6 uppercase tracking-tight">
@@ -44,12 +44,12 @@ export default function Hero() {
               <span className="text-hero-highlight">Kenya</span> While You Live
               Abroad.
             </h1>
-            <p className="text-white/90 text-base sm:text-lg leading-relaxed mb-10 max-w-xl font-medium">
+            <p className="text-white/90 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl font-medium">
               Home Link Africa provides reliable on-the-ground support for
               Kenyans living abroad who want to invest, manage property, support
               family, or handle important matters back home with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <CTAButton href="/book-consultation" variant="tangerine">
                 Book Consultation
               </CTAButton>
@@ -59,13 +59,13 @@ export default function Hero() {
             </div>
 
             {/* Trust Badge */}
-            <div className="mt-12 flex items-center gap-3">
+            <div className="mt-8 sm:mt-12 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-hero-green-dark flex items-center justify-center ring-2 ring-white/20">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <p className="text-white text-sm font-medium">
+              <p className="text-white text-xs sm:text-sm font-medium">
                 Trusted by Kenyans in{" "}
                 <span className="text-hero-highlight font-bold">10+ Countries</span>
               </p>

@@ -26,18 +26,18 @@ export default function WhyChooseUs() {
           titleClassName="text-2xl sm:text-3xl lg:text-4xl"
           subtitleClassName="max-w-full"
         />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               {differentiators.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-jade flex items-center justify-center mt-0.5 shrink-0">
-                    <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-jade flex items-center justify-center mt-0.5 shrink-0">
+                    <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-charcoal text-base leading-relaxed">
+                  <span className="text-charcoal text-sm sm:text-base leading-relaxed">
                     {item}
                   </span>
                 </li>
