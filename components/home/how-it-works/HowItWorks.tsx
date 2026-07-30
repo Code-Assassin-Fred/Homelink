@@ -1,3 +1,7 @@
+"use client";
+
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const steps = [
   {
     number: "01",
@@ -32,6 +36,7 @@ const steps = [
 ];
 
 export default function HowItWorks() {
+  const [sectionRef, isVisible] = useScrollAnimation(0.1);
   return (
     <section id="how-it-works" className="relative overflow-hidden bg-jade py-12 sm:py-16 scroll-mt-24">
       {/* Decorative diagonal shard / subtle striations similar to hero */}
@@ -83,9 +88,9 @@ export default function HowItWorks() {
           <line x1="0" y1="900" x2="900" y2="0" stroke="#008a5e" strokeWidth="0.5" opacity="0.06" />
         </svg>
       </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div ref={sectionRef as any} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mt-8 lg:mt-10">
-          <p className="mx-auto max-w-2xl text-center text-white text-base sm:text-lg lg:text-xl leading-relaxed">
+          <p className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} mx-auto max-w-2xl text-center text-white text-base sm:text-lg lg:text-xl leading-relaxed`}>
             A simple, transparent process from first contact to task completion.
           </p>
           <div className="mt-8 sm:mt-10">

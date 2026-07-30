@@ -1,4 +1,9 @@
+"use client";
+
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 export default function TrustBanner() {
+  const [bannerRef, isVisible] = useScrollAnimation(0.1);
   const trustItems = [
     {
       icon: (
@@ -90,8 +95,8 @@ export default function TrustBanner() {
   const marqueeItems = [...trustItems, ...trustItems];
 
   return (
-    <section className="bg-gradient-to-b from-white to-[#f0f0f0] py-10 sm:py-12 lg:py-16">
-      <div className="max-w-7xl mx-auto">
+    <section ref={bannerRef as any} className="bg-gradient-to-b from-white to-[#f0f0f0] py-10 sm:py-12 lg:py-16">
+      <div className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} max-w-7xl mx-auto`}>
         <p className="text-center text-charcoal font-heading font-semibold text-base sm:text-lg lg:text-xl mb-8 px-4">
           Trusted by Kenyans Living Abroad Across the Globe
         </p>

@@ -1,7 +1,11 @@
+"use client";
+
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import CTAButton from "@/components/cta-button/CTAButton";
 import SpinningGlobe from "./SpinningGlobe";
 
 export default function Hero() {
+  const [heroRef, isVisible] = useScrollAnimation(0.05);
   return (
     <section
       id="hero"
@@ -42,10 +46,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div ref={heroRef as any} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-20 pb-10 sm:pt-28 lg:pt-40 lg:pb-16">
           {/* Left Content */}
-          <div className="animate-slide-up max-w-xl mx-auto sm:mx-0 text-center sm:text-left">
+          <div className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} max-w-xl mx-auto sm:mx-0 text-center sm:text-left`}>
             <h1 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl xl:text-[2.6rem] text-white leading-[1.12] mb-6 uppercase tracking-tight">
               Your Trusted{" "}
               <span className="text-hero-highlight">Representative</span> in{" "}

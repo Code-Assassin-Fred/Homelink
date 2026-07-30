@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const companyLinks = [
   { name: "About Us", href: "/#about" },
@@ -27,10 +28,12 @@ const legalLinks = [
 export default function Footer() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const [footerRef, isVisible] = useScrollAnimation(0.05);
 
   return (
     <footer
-      className="bg-forest text-white"
+      ref={footerRef as any}
+      className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} bg-forest text-white`}
       style={{
         backgroundImage:
           "linear-gradient(180deg, var(--color-forest) 0%, rgba(2,173,126,0.10) 100%)",

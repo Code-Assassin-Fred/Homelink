@@ -130,8 +130,53 @@ h1, h2, h3, h4, h5, h6 {
 
 @utility animate-on-scroll {
   opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 @utility animate-visible {
   opacity: 1;
+  transform: translateY(0);
+}
+
+@utility animate-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+@utility animate-fade-visible {
+  opacity: 1;
+}
+
+@utility animate-scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+@utility animate-scale-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@utility animate-slide-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+@utility animate-slide-left-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@utility animate-slide-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+@utility animate-slide-right-visible {
+  opacity: 1;
+  transform: translateX(0);
 }

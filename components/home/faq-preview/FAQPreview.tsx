@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const faqs = [
   {
@@ -32,10 +33,11 @@ const faqs = [
 
 export default function FAQPreview() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [sectionRef, isVisible] = useScrollAnimation(0.1);
 
   return (
-    <section id="faqs" className="bg-white py-20 sm:py-28 scroll-mt-24">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef as any} id="faqs" className="bg-white py-20 sm:py-28 scroll-mt-24">
+      <div className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} max-w-3xl mx-auto px-4 sm:px-6 lg:px-8`}>
         <p className="max-w-2xl mx-auto text-center text-sm sm:text-base text-charcoal/80 mb-6 sm:mb-8">
           Quick answers to the most common questions from our diaspora clients.
         </p>

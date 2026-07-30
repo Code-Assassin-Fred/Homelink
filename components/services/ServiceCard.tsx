@@ -1,3 +1,6 @@
+"use client";
+
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import Link from "next/link";
 import styles from "./ServiceCard.module.css";
 
@@ -41,8 +44,10 @@ export default function ServiceCard({
   buttonTextColor,
   testimonial,
 }: ServiceCardProps) {
+  const [cardRef, isVisible] = useScrollAnimation(0.1);
+
   return (
-    <article className={styles.overviewCard} id={slug}>
+    <article ref={cardRef as any} className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} ${styles.overviewCard}`} id={slug}>
       {/* Left Column — Brand Banner */}
       <div className={styles.overviewImagePanel} style={{ background: gradient }}>
         <div className={styles.logoContainer}>

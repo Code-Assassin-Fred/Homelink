@@ -1,7 +1,11 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import CTAButton from "@/components/cta-button/CTAButton";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Page() {
+  const [sectionRef, isVisible] = useScrollAnimation(0.1);
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#1B2F2F] text-[#F4F1EA]">
       {/* ---------- Decorative clipped panel ---------- */}
@@ -32,8 +36,8 @@ export default function Page() {
       </div>
 
       {/* ---------- About Hero ---------- */}
-      <section className="relative z-10 flex min-h-screen items-center px-6 py-10 sm:px-8 sm:py-0 md:px-12 lg:px-16">
-        <div className="grid w-full items-center gap-12 lg:gap-20 lg:grid-cols-2">
+      <section ref={sectionRef as any} className="relative z-10 flex min-h-screen items-center px-6 py-10 sm:px-8 sm:py-0 md:px-12 lg:px-16">
+        <div className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} grid w-full items-center gap-12 lg:gap-20 lg:grid-cols-2`}>
           {/* Left */}
           <div className="max-w-xl">
             <h1 className="text-[32px] font-medium leading-[0.95] tracking-tight text-center sm:text-left sm:text-[42px] md:text-[56px] lg:text-[68px]">

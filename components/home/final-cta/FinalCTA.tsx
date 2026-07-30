@@ -1,8 +1,12 @@
+"use client";
+
 import CTAButton from "@/components/cta-button/CTAButton";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function FinalCTA() {
+  const [sectionRef, isVisible] = useScrollAnimation(0.1);
   return (
-    <section className="relative bg-forest py-20 sm:py-28 overflow-hidden">
+    <section ref={sectionRef as any} className="relative bg-forest py-20 sm:py-28 overflow-hidden">
       {/* Decorative SVG Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1440 500" fill="none" preserveAspectRatio="xMidYMid slice">
@@ -11,7 +15,7 @@ export default function FinalCTA() {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center`}>
         <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-white leading-tight mb-4 sm:mb-6">
           Ready to Get <span className="text-lime">Started?</span>
         </h2>

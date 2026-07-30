@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, FormEvent, useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const contactDetails = [
   {
@@ -42,6 +43,7 @@ export default function ContactSection() {
     phone: "",
     message: "",
   });
+  const [sectionRef, isVisible] = useScrollAnimation(0.1);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((current) => ({ ...current, [e.target.name]: e.target.value }));
@@ -53,14 +55,14 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden scroll-mt-24 bg-offwhite py-20 sm:py-28">
+    <section ref={sectionRef as any} id="contact" className="relative overflow-hidden scroll-mt-24 bg-offwhite py-20 sm:py-28">
       <svg className="pointer-events-none absolute inset-0 w-full h-full" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 220C240 160 480 290 720 260C960 230 1200 130 1440 180" stroke="var(--color-forest)" strokeWidth="1.5" opacity="0.35" />
         <path d="M0 280C220 240 460 360 700 330C940 300 1180 220 1440 240" stroke="var(--color-forest)" strokeWidth="1.25" opacity="0.28" />
         <path d="M0 340C210 300 450 420 690 400C930 380 1170 300 1440 320" stroke="var(--color-forest)" strokeWidth="1" opacity="0.22" />
         <path d="M0 160C230 110 470 210 710 190C950 170 1190 95 1440 130" stroke="var(--color-forest)" strokeWidth="1" opacity="0.18" />
       </svg>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12`}>
         <div className="w-full text-center mb-8 sm:mb-12">
           <p className="text-sm sm:text-base text-charcoal">
             Reliable Support in Kenya Starts With One Call

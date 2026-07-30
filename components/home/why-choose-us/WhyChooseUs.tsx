@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import SectionHeading from "@/components/section-heading/SectionHeading";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const differentiators = [
   "Over 10 years of banking experience",
@@ -15,8 +18,9 @@ const differentiators = [
 ];
 
 export default function WhyChooseUs() {
+  const [sectionRef, isVisible] = useScrollAnimation(0.1);
   return (
-    <section id="why-choose-us" className="bg-offwhite py-20 sm:py-28">
+    <section ref={sectionRef as any} id="why-choose-us" className="bg-offwhite py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Why Choose Home Link Africa"
@@ -26,7 +30,7 @@ export default function WhyChooseUs() {
           titleClassName="text-2xl sm:text-3xl lg:text-4xl"
           subtitleClassName="max-w-full"
         />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className={`${isVisible ? 'animate-visible' : 'animate-on-scroll'} grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center`}>
           {/* Left Content */}
           <div>
             <ul className="space-y-3 sm:space-y-4">
