@@ -36,6 +36,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = sideMenuOpen ? "hidden" : "";
@@ -43,6 +44,21 @@ export default function Navbar() {
       document.body.style.overflow = "";
     };
   }, [sideMenuOpen]);
+
+  useEffect(() => {
+    if (!isHome) {
+      setScrolled(true);
+      return;
+    }
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHome]);
 
   const closeSideMenu = () => setSideMenuOpen(false);
 
@@ -54,8 +70,14 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 ${
-          isHome ? "bg-hero-green" : "bg-forest"
+        className={`top-0 left-0 right-0 z-50 transition-colors duration-500 ease-out ${
+          isHome && !scrolled ? "absolute" : "sticky"
+        } ${
+          isHome
+            ? scrolled
+              ? "bg-hero-green/95 shadow-xl shadow-forest/20"
+              : "bg-transparent shadow-none"
+            : "bg-forest"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

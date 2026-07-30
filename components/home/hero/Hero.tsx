@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-16 pb-12 lg:pt-24 lg:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-32 pb-12 lg:pt-40 lg:pb-16">
           {/* Left Content */}
           <div className="animate-slide-up">
             <h1 className="font-heading font-extrabold text-xl sm:text-2xl lg:text-3xl xl:text-[2.25rem] text-white leading-[1.15] mb-6 uppercase tracking-tight">
