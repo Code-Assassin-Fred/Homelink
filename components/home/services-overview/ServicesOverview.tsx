@@ -184,7 +184,7 @@ export default function ServicesOverview() {
               stat={service.stat}
               statLabel={service.statLabel}
               cta={service.cta}
-              detailLink={`/services/${service.slug}`}
+              detailLink="#contact"
               gradient={service.gradient}
               subBrand={service.subBrand}
               themeColor={service.themeColor}
