@@ -30,31 +30,46 @@ export default function Page() {
         </div>
       </div>
 
-      {/* ---------- Hero ---------- */}
+      {/* ---------- About Hero ---------- */}
       <section className="relative z-10 flex min-h-screen items-center px-8 md:px-16">
-        <div className="max-w-2xl">
-          <h1 className="text-[58px] font-medium leading-[0.92] tracking-tight sm:text-[72px] md:text-[90px]">
-            Engineering
-            <br />
-            your next stage
-            <br />
-            of growth
-          </h1>
+        <div className="grid w-full items-center gap-20 lg:grid-cols-2">
+          {/* Left */}
+          <div className="max-w-xl">
+            <h1 className="text-[42px] font-medium leading-[0.95] tracking-tight sm:text-[56px] md:text-[68px]">
+              Your trusted
+              <br />
+              representative
+              <br />
+              in Kenya
+            </h1>
 
-          <p className="mt-8 max-w-md text-lg leading-relaxed text-[#F4F1EA]/80">
-            Securing top-tier executives to build, scale,
-            <br className="hidden sm:block" />
-            and dominate competitive landscapes.
-          </p>
+            <p className="mt-8 text-lg leading-8 text-white/75">
+              Home Link Africa provides dependable on-the-ground support for
+              Kenyans living abroad. Whether you're managing property,
+              supporting loved ones, handling important documentation, or
+              overseeing projects, we become your reliable presence in Kenya
+              with complete transparency and professional follow-through.
+            </p>
+          </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <button className="flex items-center gap-2 rounded-md bg-[#F4F1EA] px-6 py-3.5 text-sm font-medium text-[#1B2F2F] transition hover:bg-white">
-              Job Opening
+          {/* Right */}
+          <div className="max-w-md justify-self-end">
+            <p className="text-lg leading-8 text-white/75">
+              We serve as your trusted eyes and ears on the ground, helping you
+              stay connected to your investments, your family, and the matters
+              that matter most—no matter where you are in the world.
+            </p>
+
+            <div className="mt-10 space-y-4 text-lg text-white/85">
+              <div>• Property & investment oversight</div>
+              <div>• Family welfare support</div>
+              <div>• Concierge & administrative services</div>
+              <div>• Transparent photo & video reporting</div>
+            </div>
+
+            <button className="mt-10 flex items-center gap-2 rounded-md bg-[#F4F1EA] px-6 py-3.5 text-sm font-medium text-[#1B2F2F] transition hover:bg-white">
+              Book Consultation
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-            </button>
-
-            <button className="rounded-md border border-white/20 px-6 py-3.5 text-sm font-medium text-[#F4F1EA] transition hover:border-white/40">
-              Explore Expertise
             </button>
           </div>
         </div>
