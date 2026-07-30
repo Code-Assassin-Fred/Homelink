@@ -29,7 +29,16 @@ export default function Footer() {
   const isHome = pathname === "/";
 
   return (
-    <footer className="bg-forest text-white">
+    <footer
+      className="bg-forest text-white"
+      style={{
+        backgroundImage:
+          "linear-gradient(180deg, var(--color-forest) 0%, rgba(2,173,126,0.10) 100%)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundBlendMode: "overlay",
+      }}
+    >
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
@@ -88,16 +97,20 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-3">
-              {serviceLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-white text-sm hover:text-lime transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              {serviceLinks.map((link) => {
+                // On the homepage, make these scroll to the services section
+                const href = isHome ? "#services" : "/#services";
+                return (
+                  <li key={link.name}>
+                    <Link
+                      href={href}
+                      className="text-white text-sm hover:text-lime transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

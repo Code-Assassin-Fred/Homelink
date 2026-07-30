@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import CTAButton from "@/components/cta-button/CTAButton";
 
 export default function Page() {
   return (
@@ -67,10 +68,9 @@ export default function Page() {
               <div>• Transparent photo & video reporting</div>
             </div>
 
-            <button className="mt-10 flex items-center gap-2 rounded-md bg-[#F4F1EA] px-6 py-3.5 text-sm font-medium text-[#1B2F2F] transition hover:bg-white">
+            <CTAButton href="/book-consultation" variant="lime" arrow className="mt-10">
               Book Consultation
-              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-            </button>
+            </CTAButton>
           </div>
         </div>
       </section>
