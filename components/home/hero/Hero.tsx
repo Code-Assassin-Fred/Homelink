@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-6rem)] bg-hero-green overflow-hidden flex items-start"
+      className="relative min-h-[calc(100vh-6rem)] pt-24 lg:pt-0 sm:pt-28 bg-hero-green overflow-hidden flex items-start"
     >
       {/* Diagonal shard / fold pattern — CLOOPEN-style geometric depth */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -35,10 +35,10 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-24 pb-12 sm:pt-32 lg:pt-40 lg:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-20 pb-10 sm:pt-28 lg:pt-40 lg:pb-16">
           {/* Left Content */}
-          <div className="animate-slide-up">
-            <h1 className="font-heading font-extrabold text-xl sm:text-2xl lg:text-3xl xl:text-[2.25rem] text-white leading-[1.15] mb-6 uppercase tracking-tight">
+          <div className="animate-slide-up max-w-xl mx-auto sm:mx-0 text-center sm:text-left">
+            <h1 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl xl:text-[2.6rem] text-white leading-[1.12] mb-6 uppercase tracking-tight">
               Your Trusted{" "}
               <span className="text-hero-highlight">Representative</span> in{" "}
               <span className="text-hero-highlight">Kenya</span> While You Live
@@ -49,17 +49,17 @@ export default function Hero() {
               Kenyans living abroad who want to invest, manage property, support
               family, or handle important matters back home with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <CTAButton href="/book-consultation" variant="tangerine">
+            <div className="flex flex-row flex-nowrap justify-center gap-3 items-center">
+              <CTAButton href="/book-consultation" variant="tangerine" className="basis-[calc(50%-0.75rem)] min-w-[150px] max-w-[220px]">
                 Book Consultation
               </CTAButton>
-              <CTAButton href="/#services" variant="tangerine">
+              <CTAButton href="/#services" variant="tangerine" className="basis-[calc(50%-0.75rem)] min-w-[150px] max-w-[220px]">
                 Explore Our Services
               </CTAButton>
             </div>
 
             {/* Trust Badge */}
-            <div className="mt-8 sm:mt-12 flex items-center gap-3">
+            <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3">
               <div className="w-10 h-10 rounded-full bg-hero-green-dark flex items-center justify-center ring-2 ring-white/20">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

@@ -161,18 +161,13 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Mobile — CTA + hamburger */}
-            <div className="flex lg:hidden items-center gap-3">
-              <Link
-                href={isHome ? "#contact" : "/#contact"}
-                className="inline-flex items-center bg-tangerine text-white font-heading font-bold text-xs uppercase tracking-wide px-4 py-2.5 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200"
-              >
-                Book Consultation
-              </Link>
+            {/* Mobile — hamburger only */}
+            <div className="flex lg:hidden items-center justify-end w-full">
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="inline-flex items-center gap-2 text-white p-2"
                 aria-label="Toggle menu"
+                aria-expanded={mobileOpen}
               >
                 {mobileOpen ? (
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -191,7 +186,7 @@ export default function Navbar() {
         {/* Mobile drawer */}
         {mobileOpen && (
           <div
-            className={`lg:hidden border-t-2 ${
+            className={`lg:hidden fixed inset-x-0 top-24 z-40 border-t-2 ${
               isHome
                 ? "bg-hero-green/95 backdrop-blur-sm border-white/20"
                 : "bg-forest border-jade"
