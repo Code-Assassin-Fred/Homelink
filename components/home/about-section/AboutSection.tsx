@@ -32,11 +32,11 @@ export default function Page() {
       </div>
 
       {/* ---------- About Hero ---------- */}
-      <section className="relative z-10 flex min-h-screen items-center px-6 sm:px-8 md:px-12 lg:px-16">
+      <section className="relative z-10 flex min-h-screen items-center px-6 py-10 sm:px-8 sm:py-0 md:px-12 lg:px-16">
         <div className="grid w-full items-center gap-12 lg:gap-20 lg:grid-cols-2">
           {/* Left */}
           <div className="max-w-xl">
-            <h1 className="text-[32px] font-medium leading-[0.95] tracking-tight sm:text-[42px] md:text-[56px] lg:text-[68px]">
+            <h1 className="text-[32px] font-medium leading-[0.95] tracking-tight text-center sm:text-left sm:text-[42px] md:text-[56px] lg:text-[68px]">
               Your trusted
               <br />
               representative
@@ -68,9 +68,11 @@ export default function Page() {
               <div>• Transparent photo & video reporting</div>
             </div>
 
-            <CTAButton href="/book-consultation" variant="lime" arrow className="mt-8 sm:mt-10">
-              Book Consultation
-            </CTAButton>
+            <div className="mt-8 sm:mt-10 flex justify-center sm:justify-end">
+              <CTAButton href="/book-consultation" variant="lime" arrow>
+                Book Consultation
+              </CTAButton>
+            </div>
           </div>
         </div>
       </section>

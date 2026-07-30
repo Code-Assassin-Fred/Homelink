@@ -102,10 +102,10 @@ export default function HowItWorks() {
                     >
                       <div className="w-full lg:w-[60%]">
                         <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                          <div className="inline-flex items-center justify-center rounded-md bg-white text-forest font-heading font-bold text-xs sm:text-sm tracking-wide px-3 sm:px-4 py-2.5 sm:py-3">
+                          <div className={`inline-flex items-center justify-center rounded-md bg-white text-forest font-heading font-bold text-xs sm:text-sm tracking-wide px-3 sm:px-4 py-2.5 sm:py-3 ${isRight ? "order-2 ml-auto lg:order-1 lg:ml-0" : "order-1"}`}>
                             Step {step.number}
                           </div>
-                          <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">
+                          <h3 className={`font-heading font-bold text-xl sm:text-2xl text-white ${isRight ? "order-1 lg:order-2" : "order-2"}`}>
                             {step.title}
                           </h3>
                         </div>

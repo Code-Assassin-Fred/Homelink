@@ -69,13 +69,13 @@ export default function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
           <div className="space-y-4 sm:space-y-6">
-            <div className="p-0 text-forest">
+            <div className="p-0 text-forest text-center sm:text-left">
               <h3 className="font-heading font-bold text-lg sm:text-xl text-forest mb-4 sm:mb-6">
                 Get in touch
               </h3>
-              <ul className="space-y-4 sm:space-y-5">
+              <ul className="space-y-4 sm:space-y-5 mx-auto max-w-[22rem]">
                 {contactDetails.map((item) => (
-                  <li key={item.title} className="flex items-start gap-3 sm:gap-4">
+                  <li key={item.title} className="flex items-start gap-3 sm:justify-start sm:gap-4">
                     {item.href ? (
                       <a href={item.href} className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-jade flex items-center justify-center shrink-0 text-white">
                         {item.icon}
@@ -85,7 +85,7 @@ export default function ContactSection() {
                         {item.icon}
                       </div>
                     )}
-                    <div>
+                    <div className="min-w-0 text-left">
                       <p className="font-heading font-bold text-xs sm:text-sm text-forest mb-1">
                         {item.title}
                       </p>
@@ -103,11 +103,11 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="p-0 lg:pl-8 xl:pl-10">
-            <h3 className="font-heading font-bold text-xl sm:text-2xl text-forest mb-4 sm:mb-6">
+          <div className="p-0 lg:pl-8 xl:pl-10 max-w-xl w-full mx-auto sm:mx-0">
+            <h3 className="font-heading font-bold text-xl sm:text-2xl text-forest mb-4 sm:mb-6 text-center sm:text-left">
               Send us a message
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 mx-auto w-full">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
                   <label htmlFor="contact-name" className="block text-xs sm:text-sm font-heading font-bold text-forest mb-2">
@@ -169,15 +169,17 @@ export default function ContactSection() {
                   placeholder="Tell us how we can help..."
                 />
               </div>
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 bg-lime text-forest font-heading font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-lime-hover transition-colors duration-200 w-full sm:w-auto"
-              >
-                Send Message
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 bg-lime text-forest font-heading font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-[8px] hover:bg-lime-hover transition-colors duration-200"
+                >
+                  Send Message
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
             </form>
           </div>
         </div>
