@@ -21,8 +21,8 @@ export default function FinalCTA() {
           your needs with professionalism and care.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <CTAButton href="/book-consultation" variant="lime" arrow>
-            Book a Consultation
+          <CTAButton href="/contact" variant="lime" arrow>
+            Contact Us
           </CTAButton>
           <CTAButton href="/#contact" variant="tangerine" arrow>
             Contact Us

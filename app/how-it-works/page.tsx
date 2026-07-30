@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: "01",
-    title: "Book a Consultation",
+    title: "Start With a Conversation",
     description:
-      "Schedule a call at a time that works for you. Consultations are available via phone, WhatsApp, or video call — wherever you are in the world.",
-    detail: "We'll arrange a time that works for your timezone.",
+      "Reach out to our team to discuss your needs and objectives. We can connect by phone, WhatsApp, or video call — wherever you are in the world.",
+    detail: "We arrange a time that works for your timezone.",
   },
   {
     number: "02",
@@ -145,8 +145,8 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div className="mt-12">
-            <CTAButton href="/book-consultation" variant="lime" arrow>
-              Book a Consultation
+            <CTAButton href="/contact" variant="lime" arrow>
+              Contact Us
             </CTAButton>
           </div>
         </div>

@@ -5,7 +5,6 @@ import HowItWorks from "@/components/home/how-it-works/HowItWorks";
 import WhyChooseUs from "@/components/home/why-choose-us/WhyChooseUs";
 import FAQPreview from "@/components/home/faq-preview/FAQPreview";
 import FinalCTA from "@/components/home/final-cta/FinalCTA";
-import BookConsultationSection from "@/components/home/book-consultation-section/BookConsultationSection";
 import AboutSection from "@/components/home/about-section/AboutSection";
 import ContactSection from "@/components/home/contact-section/ContactSection";
 
@@ -19,7 +18,6 @@ export default function Home() {
       <WhyChooseUs />
       <FAQPreview />
       <FinalCTA />
-      <BookConsultationSection />
       <AboutSection />
       <ContactSection />
     </>

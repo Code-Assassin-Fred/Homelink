@@ -50,8 +50,8 @@ export default function Hero() {
               family, or handle important matters back home with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <CTAButton href="/book-consultation" variant="tangerine">
-                Book a Consultation
+              <CTAButton href="/contact" variant="tangerine">
+                Contact Us
               </CTAButton>
               <CTAButton href="/#services" variant="tangerine">
                 Explore Our Services

@@ -1,8 +1,8 @@
 const steps = [
   {
     number: "01",
-    title: "Book a Consultation",
-    description: "Schedule an initial call with our team to discuss your needs and objectives.",
+    title: "Start With a Conversation",
+    description: "Reach out to our team to discuss your needs and objectives.",
   },
   {
     number: "02",
