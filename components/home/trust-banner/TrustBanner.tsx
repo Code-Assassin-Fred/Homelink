@@ -104,7 +104,7 @@ export default function TrustBanner() {
           {/* Right Fade */}
           <div className="absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-[#f0f0f0] to-transparent z-10 pointer-events-none" />
 
-          <div className="flex w-max animate-trust-marquee">
+          <div className="flex w-max animate-marquee">
             {marqueeItems.map((item, index) => (
               <div
                 key={`${item.label}-${index}`}
