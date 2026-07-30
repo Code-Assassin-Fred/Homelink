@@ -123,15 +123,18 @@ export default function Navbar() {
 
                       {servicesOpen && (
                         <div className="absolute top-full left-0 mt-1 w-72 bg-forest border-2 border-jade rounded-xl shadow-2xl py-2">
-                          {services.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              className="block px-5 py-3 text-white text-sm normal-case tracking-normal font-medium hover:bg-forest-light hover:text-lime transition-colors duration-200"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
+                          {services.map((service) => {
+                            const href = isHome ? `#${service.href.split('/').pop()}` : `/#${service.href.split('/').pop()}`;
+                            return (
+                              <Link
+                                key={service.name}
+                                href={href}
+                                className="block px-5 py-3 text-white text-sm normal-case tracking-normal font-medium hover:bg-forest-light hover:text-lime transition-colors duration-200"
+                              >
+                                {service.name}
+                              </Link>
+                            );
+                          })}
                         </div>
                       )}
                     </div>
@@ -214,22 +217,25 @@ export default function Navbar() {
                       {mobileServicesOpen && (
                         <div className="ml-4 mt-1 space-y-1">
                           <Link
-                            href="/#services"
+                            href={isHome ? "#services" : "/#services"}
                             onClick={() => setMobileOpen(false)}
                             className="block px-4 py-2 text-lime text-sm font-medium hover:bg-forest-light rounded-lg transition-colors duration-200"
                           >
                             All Services
                           </Link>
-                          {services.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={() => setMobileOpen(false)}
-                              className="block px-4 py-2 text-white text-sm hover:bg-forest-light hover:text-lime rounded-lg transition-colors duration-200"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
+                          {services.map((service) => {
+                            const href = isHome ? `#${service.href.split('/').pop()}` : `/#${service.href.split('/').pop()}`;
+                            return (
+                              <Link
+                                key={service.name}
+                                href={href}
+                                onClick={() => setMobileOpen(false)}
+                                className="block px-4 py-2 text-white text-sm hover:bg-forest-light hover:text-lime rounded-lg transition-colors duration-200"
+                              >
+                                {service.name}
+                              </Link>
+                            );
+                          })}
                         </div>
                       )}
                     </>
