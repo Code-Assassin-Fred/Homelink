@@ -11,13 +11,14 @@ export default function MeetFounder() {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
-          {/* Portrait Placeholder */}
+          {/* Portrait */}
           <div className="flex justify-center">
-            <div className="w-72 h-80 sm:w-80 sm:h-96 bg-jade rounded-2xl flex flex-col items-center justify-center text-white">
-              <svg className="w-20 h-20 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              <p className="text-sm font-medium">Founder Photo Placeholder</p>
+            <div className="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/founder.jpeg"
+                alt="Founder of Home Link Africa"
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
 
