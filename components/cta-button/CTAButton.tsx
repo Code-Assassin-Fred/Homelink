@@ -21,7 +21,9 @@ export default function CTAButton({
   const pathname = usePathname();
   const resolvedHref =
     href === "/book-consultation"
-      ? "/contact"
+      ? pathname === "/"
+        ? "#contact"
+        : "/#contact"
       : href === "/about"
         ? pathname === "/"
           ? "#about"

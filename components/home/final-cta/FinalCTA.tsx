@@ -21,7 +21,7 @@ export default function FinalCTA() {
           your needs with professionalism and care.
         </p>
         <div className="flex items-center justify-center">
-          <CTAButton href="/contact" variant="lime" arrow>
+          <CTAButton href="/book-consultation" variant="lime" arrow>
             Book Consultation
           </CTAButton>
         </div>

@@ -99,8 +99,8 @@ export default function WhyChooseUsPage() {
             ))}
           </div>
           <div className="text-center mt-16">
-            <CTAButton href="/contact" variant="lime" arrow>
-              Contact Us
+            <CTAButton href="/book-consultation" variant="lime" arrow>
+              Book Consultation
             </CTAButton>
           </div>
         </div>

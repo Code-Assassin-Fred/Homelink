@@ -145,8 +145,8 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div className="mt-12">
-            <CTAButton href="/contact" variant="lime" arrow>
-              Contact Us
+            <CTAButton href="/book-consultation" variant="lime" arrow>
+              Book Consultation
             </CTAButton>
           </div>
         </div>
