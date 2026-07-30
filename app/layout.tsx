@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     "Kenya investment support",
     "Kenyans abroad",
   ],
+  icons: {
+    icon: "/logo1.png",
+    shortcut: "/logo1.png",
+    apple: "/logo1.png",
+  },
 };
 
 export default function RootLayout({

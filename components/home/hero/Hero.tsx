@@ -49,11 +49,11 @@ export default function Hero() {
               Kenyans living abroad who want to invest, manage property, support
               family, or handle important matters back home with confidence.
             </p>
-            <div className="flex flex-row flex-nowrap justify-center gap-3 items-center">
-              <CTAButton href="/book-consultation" variant="tangerine" className="basis-[calc(50%-0.75rem)] min-w-[150px] max-w-[220px]">
+            <div className="flex flex-row flex-nowrap justify-center gap-3 items-center overflow-x-auto">
+              <CTAButton href="/book-consultation" variant="tangerine" className="min-w-[140px] sm:min-w-[180px] max-w-[220px] whitespace-normal sm:whitespace-nowrap">
                 Book Consultation
               </CTAButton>
-              <CTAButton href="/#services" variant="tangerine" className="basis-[calc(50%-0.75rem)] min-w-[150px] max-w-[220px]">
+              <CTAButton href="/#services" variant="tangerine" className="min-w-[140px] sm:min-w-[180px] max-w-[220px] whitespace-normal sm:whitespace-nowrap">
                 Explore Our Services
               </CTAButton>
             </div>
