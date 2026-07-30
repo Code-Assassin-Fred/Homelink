@@ -29,7 +29,7 @@ export default function CTAButton({
         : href;
 
   const baseStyles =
-    "inline-flex items-center justify-center gap-2 font-heading font-bold text-sm sm:text-base px-8 py-4 rounded-full transition-colors duration-200";
+    "inline-flex items-center justify-center gap-2 font-heading font-bold text-sm sm:text-base px-8 py-4 rounded-[4px] transition-colors duration-200";
 
   const variantStyles = {
     lime: "bg-lime text-forest hover:bg-lime-hover",

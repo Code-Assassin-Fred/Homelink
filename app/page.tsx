@@ -18,6 +18,7 @@ export default function Home() {
       <WhyChooseUs />
       <FAQPreview />
       <FinalCTA />
+      <div className="h-20 w-full bg-transparent" />
       <AboutSection />
       <ContactSection />
     </>

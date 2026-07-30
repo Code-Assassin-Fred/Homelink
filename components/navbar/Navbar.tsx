@@ -125,7 +125,7 @@ export default function Navbar() {
                 href="/contact"
                 className="ml-4 inline-flex items-center bg-tangerine text-white font-heading font-bold text-sm uppercase tracking-wide px-6 py-3 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200"
               >
-                Contact Us
+                Book Consultation
               </Link>
 
               <button
@@ -145,7 +145,7 @@ export default function Navbar() {
                 href="/contact"
                 className="inline-flex items-center bg-tangerine text-white font-heading font-bold text-xs uppercase tracking-wide px-4 py-2.5 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200"
               >
-                Contact
+                Book Consultation
               </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -233,7 +233,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 bg-tangerine text-white font-heading font-bold text-base px-6 py-4 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200 w-full"
                 >
-                  Contact Us
+                  Book Consultation
                 </Link>
               </div>
             </div>
@@ -281,7 +281,7 @@ export default function Navbar() {
                 onClick={closeSideMenu}
                 className="flex items-center justify-center bg-tangerine text-white font-heading font-bold text-sm uppercase tracking-wide px-5 py-3 rounded-sm hover:bg-tangerine-hover transition-colors duration-200 w-full"
               >
-                Contact Us
+                Book Consultation
               </Link>
             </div>
           </aside>

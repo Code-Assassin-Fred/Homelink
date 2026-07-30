@@ -1,43 +1,64 @@
-import SectionHeading from "@/components/section-heading/SectionHeading";
+import { ArrowRight } from "lucide-react";
 
-export default function AboutSection() {
+export default function Page() {
   return (
-    <section id="about" className="scroll-mt-24 bg-offwhite py-20 sm:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="About Us"
-          subtitle="We help diaspora clients navigate property, family, and investment matters in Kenya with transparency and care."
-        />
+    <main className="relative min-h-screen overflow-hidden bg-[#1B2F2F] text-[#F4F1EA]">
+      {/* ---------- Decorative clipped panel ---------- */}
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[58%]"
+        style={{
+          clipPath: "polygon(36% 0, 100% 0, 100% 100%, 0% 100%)",
+        }}
+      >
+        {/* Main panel */}
+        <div className="absolute inset-0 bg-[#36534E]" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          <div className="bg-white rounded-[32px] border border-forest/10 shadow-sm p-8 sm:p-10">
-            <h3 className="font-heading font-bold text-2xl text-forest mb-4">
-              Professional representation on the ground
-            </h3>
-            <p className="text-charcoal text-base sm:text-lg leading-relaxed">
-              Home Link Africa exists to give Kenyans living abroad a trusted local partner who can manage important responsibilities back home with integrity, consistency, and clear communication.
-            </p>
-          </div>
-
-          <div className="bg-forest rounded-[32px] p-8 sm:p-10 text-white">
-            <h3 className="font-heading font-bold text-xl text-lime mb-6">Why clients choose us</h3>
-            <ul className="space-y-4 text-sm leading-relaxed text-white/90">
-              <li className="flex gap-3">
-                <span className="text-lime font-bold">•</span>
-                <span>Reliable and transparent local support for everyday and complex matters.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-lime font-bold">•</span>
-                <span>Professional guidance for property, investment, and family support needs.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-lime font-bold">•</span>
-                <span>Clear communication and attentive service across multiple time zones.</span>
-              </li>
-            </ul>
-          </div>
+        {/* Decorative diagonal lines */}
+        <div
+          className="absolute inset-0"
+          style={{
+            clipPath: "polygon(36% 0, 44% 0, 8% 100%, 0% 100%)",
+          }}
+        >
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute inset-y-0 border-l border-white/10"
+              style={{ left: `${i * 8}px` }}
+            />
+          ))}
         </div>
       </div>
-    </section>
+
+      {/* ---------- Hero ---------- */}
+      <section className="relative z-10 flex min-h-screen items-center px-8 md:px-16">
+        <div className="max-w-2xl">
+          <h1 className="text-[58px] font-medium leading-[0.92] tracking-tight sm:text-[72px] md:text-[90px]">
+            Engineering
+            <br />
+            your next stage
+            <br />
+            of growth
+          </h1>
+
+          <p className="mt-8 max-w-md text-lg leading-relaxed text-[#F4F1EA]/80">
+            Securing top-tier executives to build, scale,
+            <br className="hidden sm:block" />
+            and dominate competitive landscapes.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <button className="flex items-center gap-2 rounded-md bg-[#F4F1EA] px-6 py-3.5 text-sm font-medium text-[#1B2F2F] transition hover:bg-white">
+              Job Opening
+              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            </button>
+
+            <button className="rounded-md border border-white/20 px-6 py-3.5 text-sm font-medium text-[#F4F1EA] transition hover:border-white/40">
+              Explore Expertise
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
