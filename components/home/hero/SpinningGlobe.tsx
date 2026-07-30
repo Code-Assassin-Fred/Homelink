@@ -2,7 +2,11 @@
 
 import { useEffect, useRef } from "react";
 
-export default function SpinningGlobe() {
+type SpinningGlobeProps = {
+  className?: string;
+};
+
+export default function SpinningGlobe({ className = "" }: SpinningGlobeProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -131,7 +135,7 @@ export default function SpinningGlobe() {
       ref={canvasRef}
       width={480}
       height={480}
-      className="w-full h-auto max-w-md drop-shadow-2xl aspect-square"
+      className={`w-full h-auto max-w-md drop-shadow-2xl aspect-square ${className}`.trim()}
       style={{ display: "block", background: "transparent" }}
     />
   );

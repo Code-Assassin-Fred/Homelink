@@ -34,6 +34,14 @@ export default function Hero() {
         </svg>
       </div>
 
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden lg:hidden" aria-hidden="true">
+        <div className="absolute inset-x-0 bottom-[-2rem] flex justify-center sm:bottom-[-3rem] opacity-[0.16] sm:opacity-[0.2]">
+          <div className="w-[min(100%,22rem)] aspect-square sm:w-[24rem]">
+            <SpinningGlobe className="max-w-none h-full w-full" />
+          </div>
+        </div>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-20 pb-10 sm:pt-28 lg:pt-40 lg:pb-16">
           {/* Left Content */}
