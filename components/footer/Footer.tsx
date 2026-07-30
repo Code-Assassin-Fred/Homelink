@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const companyLinks = [
-  { name: "About Us", href: "/about" },
+  { name: "About Us", href: "/#about" },
   { name: "How It Works", href: "/how-it-works" },
   { name: "Why Choose Us", href: "/why-choose-us" },
   { name: "FAQs", href: "/#faqs" },

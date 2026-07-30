@@ -25,7 +25,7 @@ export default function Navbar() {
   const primaryNavLinks: NavLink[] = [
     { name: "Home", href: "/" },
     { name: "Services", href: isHome ? "#services" : "/#services", hasDropdown: true },
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: isHome ? "#about" : "/#about" },
   ];
   const sideMenuLinks: NavLink[] = [
     { name: "How It Works", href: isHome ? "#how-it-works" : "/#how-it-works" },
@@ -122,7 +122,7 @@ export default function Navbar() {
               ))}
 
               <Link
-                href="/book-consultation"
+                href={isHome ? "#book-consultation" : "/#book-consultation"}
                 className="ml-4 inline-flex items-center bg-tangerine text-white font-heading font-bold text-sm uppercase tracking-wide px-6 py-3 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200"
               >
                 Book a Consultation
@@ -142,7 +142,7 @@ export default function Navbar() {
             {/* Mobile — CTA + hamburger */}
             <div className="flex lg:hidden items-center gap-3">
               <Link
-                href="/book-consultation"
+                href={isHome ? "#book-consultation" : "/#book-consultation"}
                 className="inline-flex items-center bg-tangerine text-white font-heading font-bold text-xs uppercase tracking-wide px-4 py-2.5 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200"
               >
                 Book
@@ -229,7 +229,7 @@ export default function Navbar() {
               ))}
               <div className="pt-4">
                 <Link
-                  href="/book-consultation"
+                  href={isHome ? "#book-consultation" : "/#book-consultation"}
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 bg-tangerine text-white font-heading font-bold text-base px-6 py-4 rounded-[4px] hover:bg-tangerine-hover transition-colors duration-200 w-full"
                 >

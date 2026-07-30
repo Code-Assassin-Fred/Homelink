@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface CTAButtonProps {
   variant?: "lime" | "outlined" | "tangerine";
@@ -15,6 +18,18 @@ export default function CTAButton({
   arrow = false,
   className = "",
 }: CTAButtonProps) {
+  const pathname = usePathname();
+  const resolvedHref =
+    href === "/book-consultation"
+      ? pathname === "/"
+        ? "#book-consultation"
+        : "/#book-consultation"
+      : href === "/about"
+        ? pathname === "/"
+          ? "#about"
+          : "/#about"
+        : href;
+
   const baseStyles =
     "inline-flex items-center justify-center gap-2 font-heading font-bold text-sm sm:text-base px-8 py-4 rounded-full transition-colors duration-200";
 
@@ -27,7 +42,7 @@ export default function CTAButton({
 
   return (
     <Link
-      href={href}
+      href={resolvedHref}
       className={`${baseStyles} ${variantStyles[variant]} ${className}`}
     >
       {children}
