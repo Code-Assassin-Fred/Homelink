@@ -51,7 +51,6 @@ export default function ServiceCard({
       {/* Left Column — Brand Banner */}
       <div className={styles.overviewImagePanel} style={{ background: gradient }}>
         <div className={styles.logoContainer}>
-          <span className={styles.logoBrand}>Home Link</span>
           <span className={styles.logoSub}>{subBrand}</span>
         </div>
       </div>

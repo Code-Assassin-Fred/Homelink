@@ -24,10 +24,13 @@ export default function FinalCTA() {
           consultation today and let us show you how Home Link Africa can support
           your needs with professionalism and care.
         </p>
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-3">
           <CTAButton href="/book-consultation" variant="lime" arrow>
             Book Consultation
           </CTAButton>
+          <p className="text-white/60 text-xs sm:text-sm font-medium">
+            Free 15-minute call · No obligation
+          </p>
         </div>
       </div>
     </section>

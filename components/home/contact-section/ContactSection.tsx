@@ -106,6 +106,12 @@ export default function ContactSection() {
           </div>
 
           <div className="p-0 lg:pl-8 xl:pl-10 max-w-xl w-full mx-auto sm:mx-0">
+            <div className="flex justify-center sm:justify-start mb-3">
+              <span className="inline-flex items-center gap-2 bg-forest/10 text-forest text-xs font-semibold px-4 py-2 rounded-full border border-forest/20">
+                <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
+                Free 15-Minute Consultation — No Obligation
+              </span>
+            </div>
             <h3 className="font-heading font-bold text-xl sm:text-2xl text-forest mb-4 sm:mb-6 text-center sm:text-left">
               Send us a message
             </h3>

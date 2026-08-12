@@ -133,7 +133,7 @@ const services = [
     tagline: "No request is too unique,",
     taglineItalic: "we'll find a way",
     description:
-      "One of the business's strongest differentiators. Every request is assessed individually and handled professionally where feasible.",
+      "Have a request that doesn't fit neatly into a category? We assess every enquiry individually and handle it with the same professionalism and accountability as our core services.",
     items: [
       "Representing clients at meetings",
       "Property or business inspections",
