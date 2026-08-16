@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Which areas of Kenya do you serve?",
     answer:
-      "We serve clients across all counties in Kenya, with strong coverage in Nairobi, Mombasa, Kisumu, Nakuru, and other major towns.",
+      "We serve clients across all counties in Kenya, offering comprehensive support and coverage nationwide.",
   },
   {
     question: "How do you provide updates?",
